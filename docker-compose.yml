@@ -1,0 +1,37 @@
+services:
+  mysql-db:
+    image: mysql:8.0
+    container_name: mysql-container-PPejemplo
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: GenerandoUnaPassSeguraQueEs8DrHF072
+      MYSQL_DATABASE: citamedica
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - red-springboot
+
+  springboot-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: springboot-container-PPejemplo
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./mi-cita-medica:/app/src
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/citamedica?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: GenerandoUnaPassSeguraQueEs8DrHF072
+    depends_on:
+      - mysql-db
+    networks:
+      - red-springboot
+
+volumes:
+  mysql_data:
+
+networks:
+  red-springboot:
