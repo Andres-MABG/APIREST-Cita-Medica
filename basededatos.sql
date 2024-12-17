@@ -62,5 +62,6 @@ INSERT INTO roles (nombre) VALUES ('paciente'), ('medico');
 INSERT INTO estados (nombre) VALUES ('pendiente'), ('pagada'), ('confirmada');
 
 INSERT INTO usuarios (nombre, email, password, rol_id) VALUES ('Pablo Perez', 'pablo@ejemplo.com', '$2b$12$YBqS94HGE1bTXPxwsm/ieuYKolTNlJwdtr9O2kDl/d1ETRG/fA2Ma', 1), ('Dra. Ana Rodriguez', 'ana@ejemplo.com', '$2b$12$149vbUjtHKvN7d37ylT6M.Y6eDXKj1tSc9Bj6O9ZLKtA7hBdtDkw2', 2);
+--Contraseñas decodificadas
 -- Pass de pablo: contraseniahashdepablo
 -- Pass de ana: contraseniahashdeana
