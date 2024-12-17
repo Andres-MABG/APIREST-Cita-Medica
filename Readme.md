@@ -1,7 +1,7 @@
 ## Api RestFull Cita Medica
 
 ### **1. Solicitar cita médica**
-Permite a un usuario de tipo **paciente** solicitar una cita en un horario disponible utilizando el metodo POST con la **URL**: `/api/pacientes/citas` con el sistema de autenticación ***Basic Auth*** de springboot security.  
+Permite a un usuario de tipo **paciente** solicitar una cita en un horario disponible utilizando el metodo POST con la **URL**: `/api/pacientes/citas` con el sistema de autenticación ***Basic Auth*** de springboot security.  En el que se utiliza el email y la contraseña que al guardarse en la base de datos estará codificada con la clase BCrypt.
 
 **Body (JSON)**:
 ```json
