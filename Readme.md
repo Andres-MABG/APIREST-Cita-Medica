@@ -1,7 +1,7 @@
 ## Api RestFull Cita Medica
 
 ### **1. Solicitar cita médica**
-Permite a un usuario de tipo **paciente** solicitar una cita en un horario disponible utilizando el metodo POST con la **URL**: `/api/pacientes/citas` con el sistema de autenticacion ***Basic Auth*** de springboot security.  
+Permite a un usuario de tipo **paciente** solicitar una cita en un horario disponible utilizando el metodo POST con la **URL**: `/api/pacientes/citas` con el sistema de autenticación ***Basic Auth*** de springboot security.  
 
 **Body (JSON)**:
 ```json
@@ -28,7 +28,7 @@ Permite a un usuario de tipo **paciente** solicitar una cita en un horario dispo
 ```
 
 ### **2. Iniciar pago de cita**
-Se inicia el proceso de pago en PayPal Sandbox para confirmar la cita utilizando el metodo POST con la **URL**: `/api/pagos/iniciar` con el sistema de autenticacion ***Basic Auth*** de springboot security.  
+Se inicia el proceso de pago en PayPal Sandbox para confirmar la cita utilizando el metodo POST con la **URL**: `/api/pagos/iniciar` con el sistema de autenticación ***Basic Auth*** de springboot security.  
 
 **Body (JSON)**:
 ```json
@@ -65,7 +65,7 @@ En el navegador se ingresa la url proporcionada por el servicio y se autoriza el
 }
 ```
 ### **3. Confirmar Cita (Médico)**
-Permite a un usuario de tipo **medico** confirmar una cita pagada asignandolo a la misma utilizando el metodo POST con la **URL**: `/api/medicos/citas/confirmar` con el sistema de autenticacion ***Basic Auth*** de springboot security.  
+Permite a un usuario de tipo **medico** confirmar una cita pagada asignandolo a la misma utilizando el metodo POST con la **URL**: `/api/medicos/citas/confirmar` con el sistema de autenticación ***Basic Auth*** de springboot security.  
 
 **Body (JSON)**:
 ```json
@@ -90,7 +90,7 @@ Permite a un usuario de tipo **medico** confirmar una cita pagada asignandolo a 
 ```
 
 ### **4. Listar Citas del Día (Médico)**
-Permite a un usuario de tipo **medico** ver todas las citas programadas para un día específico utilizando el metodo POST con la **URL**: `/api/medicos/citas` con el sistema de autenticacion ***Basic Auth*** de springboot security.  
+Permite a un usuario de tipo **medico** ver todas las citas programadas para un día específico utilizando el metodo POST con la **URL**: `/api/medicos/citas` con el sistema de autenticación ***Basic Auth*** de springboot security.  
 
 **Respuesta**:
 ```json
